@@ -1,0 +1,228 @@
+@font-face {
+    font-family: "Dongle-Regular";
+    src: url("../fonts/Dongle/Dongle-Regular.ttf") format("truetype");
+}
+body{
+    font-family: sans-serif;
+    color: rgb(0, 0, 107);
+}
+header nav{
+    background-color: white;
+    z-index: 10;
+}
+.navbar-brand{
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header{
+    width: 100%;
+    transition: 0.5s ease-in;
+    /* border-bottom: 1px solid hsla(0, 0%, 50%, 0.5); */
+    /* box-shadow: rgba(128, 128, 128, 0.336) 0px 1px; */
+}
+.header-bar{
+    height: auto;
+    position: fixed;
+    top:0;
+}
+.header-bar img{
+    /* height: auto; */
+    width: 15% !important;
+}
+.header-bar .header-title-mobile{
+    font-size: 30px;
+}
+.header-bar .header-title-mobile{
+    display: inline !important;
+}
+.header-title-mobile{
+    font-family: 'Dongle-Regular';
+    color: rgb(0, 0, 173);
+    margin-top: 0px;
+    margin-left: 5px;
+    margin-bottom: 0px;
+    font-size: 40px;
+}
+.sign-button{
+}
+
+/* Header image section */
+.header-image-row{
+    display: flex;
+}
+.header-image{
+    /* background-image: image-set(url('../images/header-image.png') 1x); */
+    background-image: url('../images/header-image.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: inherit;
+    background-size: contain;
+}
+
+.header-image-text h3{
+    text-align: left;
+    /* font-size: xx-large; */
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+
+/* Introduction Image Section */
+.intro-image-section{
+    align-items: center;
+}
+
+.intro-image{
+    width: 100%;
+}
+
+.intro-image-section-text h4{
+    font-size: 1.5rem;
+}
+
+.intro-image-section-text h3{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.intro-image-section-text p:first-of-type{
+    font-size: 1.3rem;
+}
+
+/* Why Pagistnation Section */
+.why-section-overlay{
+    /* height: 250px; */
+    background-color: rgba(56, 182, 255, 0.651);
+    transform: skewY(2deg);
+    overflow: hidden;
+}
+
+.why-section-overlay-correction{
+    transform: skewY(-2deg);
+}
+
+.why-section-overlay-correction h2{
+    font-weight: bolder;
+    font-size: 2.5rem;
+}
+
+.why-section-cards .card{
+    border: none;
+    padding: 20px;
+}
+
+.why-section-cards .card .card-title{
+    font-size: 1.5rem;
+}
+
+/* Teacher Section */
+.teacher-section h3{
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.teacher-section p{
+    font-size: 1.2rem;
+    line-height: 30px;
+}
+
+/* Students Learn Anything Section */
+.students-learn-anything-section h3{
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.students-learn-anything-section p{
+    font-size: 1.2rem;
+    line-height: 30px;
+}
+
+@media only screen and (max-width:600px) {
+    .desktop-menu-left{
+        display: none;
+    }
+    .header-img-mobile{
+        width: 30% !important;
+    }
+
+    .header-bar img{
+        width: 20% !important;
+    }
+    .header-title-mobile{
+        font-size: 35px;
+    }
+
+    /* Header image section */
+
+    .header-image-empty{
+        display: none;
+    }
+    .header-image{
+        display: none;
+    }
+    .header-image-text-overlay{
+        background-image: url('../images/header-image.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        height: inherit;
+        background-size: contain;
+        padding: 0;
+    }
+    .header-image-text{
+        background-color: rgba(207, 239, 250, 0.75);
+        padding: 10px;
+        text-align: center;
+    }
+    .header-image-text-overlay h3{
+        text-align: center;
+        font-size: 1.75rem;
+        font-weight: bolder;
+    }
+    .header-image-text-overlay h5{
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    /* Intro Image Section */
+
+    .intro-image-section{
+        align-items: center;
+    }
+    
+    .intro-image{
+        width: 100%;
+    }
+    
+    .intro-image-section-text h4{
+        font-size: 1.2rem;
+    }
+    
+    .intro-image-section-text h3{
+        font-size: 1.8rem;
+        font-weight: bold;
+    }
+    
+    .intro-image-section-text p{
+        font-size: 14px !important;
+    }
+
+    /* Teacher Section */
+    .teacher-section{
+        text-align: center;
+    }
+
+    .teacher-section p{
+        font-size: 1rem;
+    }
+
+    /* Students learn anything section */
+    .students-learn-anything-section .row{
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .students-learn-anything-section p{
+        font-size: 1rem;
+    }
+}
