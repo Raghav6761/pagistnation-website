@@ -149,7 +149,7 @@ header nav{
     line-height: 30px;
 }
 
-/* Footer */
+/* Footer Section */
 footer{
     background-color: rgb(3, 140, 255);
     padding: 50px 75px;
@@ -202,6 +202,14 @@ footer{
     font-size: 14px;
     font-weight: bolder;
     color: black;
+}
+
+.footer-left-section .address-web-view{
+    display: block;
+}
+
+.footer-left-section .address-mobile-view{
+    display: none;
 }
 
 .footer-center-section a{
@@ -345,5 +353,34 @@ footer{
 
     .creator-section p{
         font-size: 1rem;
+    }
+
+    /* Footer Section */
+    footer{
+        padding: 20px;
+    }
+
+    .footer-left-section{
+        padding: 20px;
+    }
+
+    .footer-left-section p{
+        text-align: center;
+    }
+
+    .footer-left-section .address-web-view{
+        display: none;
+    }
+
+    .footer-left-section .address-mobile-view{
+        display: block;
+    }
+
+    .footer-center-section{
+        padding: 20px;
+    }
+
+    .footer-right-section{
+        padding: 20px;
     }
 }
