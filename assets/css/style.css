@@ -2,6 +2,10 @@
     font-family: "Dongle-Regular";
     src: url("../fonts/Dongle/Dongle-Regular.ttf") format("truetype");
 }
+::selection {
+    color: rgb(238, 238, 238);
+    background: #004aad;
+}
 body{
     font-family: sans-serif;
     color: rgb(0, 0, 107);
@@ -82,8 +86,9 @@ header nav{
 }
 
 .intro-image-section-text h3{
+    line-height: 1rem;
     font-size: 2rem;
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 .intro-image-section-text p:first-of-type{
@@ -255,6 +260,11 @@ footer{
     font-weight: bolder;
     color: white;
     margin: 10px auto;
+}
+
+.footer-right-section ul>li>a{
+    color: white;
+    text-decoration: none;
 }
 
 
