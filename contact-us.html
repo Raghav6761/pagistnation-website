@@ -100,19 +100,21 @@
                                 <h3>Get In Touch</h3>
                                 <h5>We are here for you! How can we help ?</h5>
                                 <br>
-                                <form>
+                                <!-- <form action="https://app.pagistnation.com/api/feedback/out-source" method="post"> -->
+                                <form action="#" name="contactForm" onsubmit="submitForm(this)" method="post">
+                                <!-- <form action="#" onsubmit="sendMail(this);" method="post"> -->
                                     <div class="form-group contact-input-group">
-                                        <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                        <input type="text" name="name" class="form-control form-control-lg" id="inputName" aria-describedby="inputName" placeholder="Enter Your Name">
+                                    </div>
+                                    <div class="form-group contact-input-group">
+                                        <input type="email" name="email" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your email">
                                         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                                     </div>
                                     <div class="form-group contact-input-group">
-                                        <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password">
-                                    </div>
-                                    <div class="form-group contact-input-group">
                                         <!-- <label for="exampleFormControlTextarea1">Example textarea</label> -->
-                                        <textarea class="form-control form-control-lg" id="exampleFormControlTextarea1" rows="5"></textarea>
+                                        <textarea class="form-control form-control-lg" name="message" id="exampleFormControlTextarea1" rows="5"></textarea>
                                     </div>
-                                    <button type="submit" class="btn btn-primary btn-header contact-submit-btn">Submit</button>
+                                    <button type="submit" id="submitButton" class="btn btn-primary btn-header contact-submit-btn">Submit</button>
                                 </form>
                             </div>
                         </div>
@@ -200,6 +202,45 @@
                 header.classList.remove("header-bar");
             }
         });
+    </script>
+    <script>
+        async function sendMail(form){
+            const url = "https://app.pagistnation.com/api/feedback/out-source";
+            const xhr = new XMLHttpRequest();
+            // console.log('in the sendMail form');
+            // console.log(form, form.name.value, form.email.value, form.message.value);
+            xhr.open("POST", url, true);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.send(JSON.stringify({
+                // name: 'test name',
+                // email: 'wraghav6761@gmail.com',
+                // message: 'test message'
+                name: form.name.value,
+                email: form.email.value,
+                message: form.message.value
+            }));
+            xhr.onload = function() {
+            // console.log("HELLO")
+            // console.log(this.responseText);
+            var data = JSON.parse(this.responseText);
+            // console.log(data);
+            }
+        }
+
+        function submitForm(form){
+            // console.log('in the submitForm function');
+            // console.log(form)
+            // sendMail(form);
+            sendMail(form).then(function(el){
+                event.preventDefault();
+                // event.preventDefault();
+                alert('Thanks for time, we\'ll get back to you soon. You can also call/message 9781101234');
+            },function(err){
+                event.preventDefault();
+                // event.preventDefault();
+                alert('Seems there was issue, you can always call/message at 9781101234');
+            })
+        }
     </script>
 </body>
 </html>
